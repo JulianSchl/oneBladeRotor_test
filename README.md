@@ -1,5 +1,6 @@
 # oneBladeRotor_test
 Requirements:
+* preCICE
 * pypreCICE
 * OpenFOAM (eg. -2012)
 * Python 3
