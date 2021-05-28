@@ -1,0 +1,61 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dynamicFvMesh dynamicMotionSolverFvMesh;
+
+motionSolverLibs ("libfvMotionSolvers.so");
+
+solver      displacementLaplacian;
+
+displacementLaplacianCoeffs {
+
+    diffusivity uniform;
+    //diffusivity exponential 0.01 inverseDistance ("airfoil.*");
+
+}
+
+/*
+dynamicFvMesh   dynamicMotionSolverFvMesh;
+motionSolverLibs ("libdynamicMesh.so");
+solver		multiSolidBodyMotionSolver;
+
+
+bladeAMICellZone0
+{
+	solidBodyMotionFunction multiMotion;
+	rotatingMotion
+	{
+		solidBodyMotionFunction  rotatingMotion;
+		rotatingMotionCoeffs
+		{
+			origin        (0 0 0);
+			axis          (0 0 1);
+			omega         18.67;
+			
+		}
+	}
+	pitchingMotion  /// this instruction MUST come after rotor motion, otherwise the center of rotation is wrong
+	{
+		solidBodyMotionFunction  oscillatingRotatingMotion;
+		origin        (0.5 0 0);
+		amplitude     (0 0 -25);  // degs
+		initialOffset 0; // offset of foil oscillation at t=0, multiple of pi, in rad
+		omega         18.67;
+		
+	}
+}
+*/

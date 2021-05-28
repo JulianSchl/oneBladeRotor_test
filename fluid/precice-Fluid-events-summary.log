@@ -1,0 +1,53 @@
+Run finished at Fri May 28 09:57:52 2021
+Global runtime       = 200608ms / 200.608s
+Number of processors = 1
+# Rank: 0
+
+                                                                              Event |      Count |  Total[ms] |    Max[ms] |    Min[ms] |    Avg[ms] | Time Ratio |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                            _GLOBAL |          1 |     200608 |     200608 |     200608 |     200608 |          1 |
+                                                                            advance |       1000 |     142281 |        447 |          0 |        142 |      0.709 |
+                                                            advance/m2n.receiveData |       1000 |     141961 |        447 |          0 |        141 |      0.708 |
+                                                               advance/m2n.sendData |       1000 |         61 |          0 |          0 |          0 |   0.000304 |
+                           advance/map.nn.computeMapping.FromSolid-MeshToFluid-Mesh |          1 |          0 |          0 |          0 |          0 |          0 |
+        advance/map.nn.computeMapping.FromSolid-MeshToFluid-Mesh.getIndexOnVertices |          1 |          0 |          0 |          0 |          0 |          0 |
+                                  advance/map.nn.mapData.FromFluid-MeshToSolid-Mesh |       1000 |          2 |          0 |          0 |          0 |   9.97e-06 |
+                                  advance/map.nn.mapData.FromSolid-MeshToFluid-Mesh |       1000 |          2 |          0 |          0 |          0 |   9.97e-06 |
+                                                                          configure |          1 |          0 |          0 |          0 |          0 |          0 |
+                                                                           finalize |          1 |          0 |          0 |          0 |          0 |          0 |
+                                                                         initialize |          1 |      13194 |      13194 |      13194 |      13194 |     0.0658 |
+                                             initialize/m2n.requestMasterConnection |          1 |      13193 |      13193 |      13193 |      13193 |     0.0658 |
+                                             initialize/m2n.requestSlavesConnection |          1 |          0 |          0 |          0 |          0 |          0 |
+                                        initialize/partition.prepareMesh.Fluid-Mesh |          1 |          0 |          0 |          0 |          0 |          0 |
+                                  initialize/partition.receiveGlobalMesh.Solid-Mesh |          1 |          0 |          0 |          0 |          0 |          0 |
+                                                                     initializeData |          1 |          0 |          0 |          0 |          0 |          0 |
+                    initializeData/map.nn.computeMapping.FromFluid-MeshToSolid-Mesh |          1 |          0 |          0 |          0 |          0 |          0 |
+ initializeData/map.nn.computeMapping.FromFluid-MeshToSolid-Mesh.getIndexOnVertices |          1 |          0 |          0 |          0 |          0 |          0 |
+                           initializeData/map.nn.mapData.FromFluid-MeshToSolid-Mesh |          1 |          0 |          0 |          0 |          0 |          0 |
+                                                                     solver.advance |       1000 |      45047 |         98 |          0 |         45 |      0.225 |
+                                                                  solver.initialize |          1 |         75 |         75 |         75 |         75 |   0.000374 |
+
+
+                                                                               Name |        Max |  MaxOnRank |        Min |  MinOnRank |    Min/Max |
+------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                            _GLOBAL |     200608 |          0 |     200608 |          0 |          1 |
+                                                                            advance |        447 |          0 |          0 |          0 |          0 |
+                                                            advance/m2n.receiveData |        447 |          0 |          0 |          0 |          0 |
+                                                               advance/m2n.sendData |          0 |          0 |          0 |          0 |          0 |
+                           advance/map.nn.computeMapping.FromSolid-MeshToFluid-Mesh |          0 |          0 |          0 |          0 |          0 |
+        advance/map.nn.computeMapping.FromSolid-MeshToFluid-Mesh.getIndexOnVertices |          0 |          0 |          0 |          0 |          0 |
+                                  advance/map.nn.mapData.FromFluid-MeshToSolid-Mesh |          0 |          0 |          0 |          0 |          0 |
+                                  advance/map.nn.mapData.FromSolid-MeshToFluid-Mesh |          0 |          0 |          0 |          0 |          0 |
+                                                                          configure |          0 |          0 |          0 |          0 |          0 |
+                                                                           finalize |          0 |          0 |          0 |          0 |          0 |
+                                                                         initialize |      13194 |          0 |      13194 |          0 |          1 |
+                                             initialize/m2n.requestMasterConnection |      13193 |          0 |      13193 |          0 |          1 |
+                                             initialize/m2n.requestSlavesConnection |          0 |          0 |          0 |          0 |          0 |
+                                        initialize/partition.prepareMesh.Fluid-Mesh |          0 |          0 |          0 |          0 |          0 |
+                                  initialize/partition.receiveGlobalMesh.Solid-Mesh |          0 |          0 |          0 |          0 |          0 |
+                                                                     initializeData |          0 |          0 |          0 |          0 |          0 |
+                    initializeData/map.nn.computeMapping.FromFluid-MeshToSolid-Mesh |          0 |          0 |          0 |          0 |          0 |
+ initializeData/map.nn.computeMapping.FromFluid-MeshToSolid-Mesh.getIndexOnVertices |          0 |          0 |          0 |          0 |          0 |
+                           initializeData/map.nn.mapData.FromFluid-MeshToSolid-Mesh |          0 |          0 |          0 |          0 |          0 |
+                                                                     solver.advance |         98 |          0 |          0 |          0 |          0 |
+                                                                  solver.initialize |         75 |          0 |         75 |          0 |          1 |
